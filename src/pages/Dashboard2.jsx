@@ -78,7 +78,7 @@ export const Dashboard2 = () => {
 
 
       <div className="flex justify-center bg-gray-180 self-stretch">
-        <div className="w-2/3 rounded shadow-lg">
+        <div className="w-2/3 rounded-10 shadow-lg">
           {/* <LineChart /> */}
           <SalesChart />
         </div>

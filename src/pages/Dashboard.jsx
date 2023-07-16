@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ExpenseComponent from "../components/ExpenseComponent";
+import { useNavigate } from "react-router-dom";
 // import Calender from "../components/Calender";
 import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
@@ -13,6 +14,12 @@ export const Dashboard = () => {
       key: "selection",
     },
   ]);
+  
+  let navigate = useNavigate(); 
+  const handleRedirect = () =>{ 
+    let path = `dashboard`; 
+    navigate(path);
+  }
   return (
     <section>
       <div
@@ -56,9 +63,9 @@ export const Dashboard = () => {
         <div className="h-4"></div>
         <button
           className="py-2 px-5 rounded-lg font-medium text-white text-center bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 duration-150 block md:py-3 md:inline"
-          onClick={() => {
+          onClick={handleRedirect
             // Add your button click functionality here
-          }}
+          }
         >
           Try it out
         </button>
